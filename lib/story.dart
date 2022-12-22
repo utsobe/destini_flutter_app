@@ -1,9 +1,10 @@
 class Story {
-  String? storyTitle;
-  String? choice1;
-  String? choice2;
+  String storyTitle;
+  String choice1;
+  String choice2;
 
-  Story({this.storyTitle, this.choice1, this.choice2});
+  Story(
+      {required this.storyTitle, required this.choice1, required this.choice2});
 }
 
 //TODO: Step 2 - Create a new class called Story.
