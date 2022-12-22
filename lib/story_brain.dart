@@ -7,6 +7,7 @@ class StoryBrain {
 //TODO: Step 7 - Uncomment the lines below to include storyData as a private property in StoryBrain. Hint: You might need to change something in story.dart to make this work.
 
   int _storyNumber = 0;
+  bool _isVisible = true;
 
   List<Story> _storyData = [
     Story(
@@ -63,6 +64,14 @@ class StoryBrain {
         _storyNumber == 4 ||
         _storyNumber == 3) {
       _storyNumber = 0;
+    }
+  }
+
+  bool buttonShouldBeVisible() {
+    if (_storyNumber == 0 || _storyNumber == 1 || _storyNumber == 2) {
+      return true;
+    } else {
+      return false;
     }
   }
 
